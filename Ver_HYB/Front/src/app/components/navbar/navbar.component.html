@@ -1,0 +1,59 @@
+<nav class="navbar">
+  <button class="navbar__burger" (click)="onBurgerClick()">
+    <i class="fas fa-bars"></i>
+  </button>
+
+  <div class="navbar__links">
+    <!-- Catégories de premier niveau, générées dynamiquement -->
+    <div class="navbar__item" *ngFor="let cat of topCategories" [class.has-mega-menu]="hasMegaMenu(cat.id)">
+
+      <!-- Catégorie AVEC sous-catégories -> bouton qui ouvre un méga-menu -->
+      <button class="btn-carte-cadeau" *ngIf="hasMegaMenu(cat.id)" (click)="toggleMegaMenu(cat.id)">
+        {{ cat.name }}
+        <i class="fas fa-chevron-up" *ngIf="openMegaMenuId === cat.id"></i>
+        <i class="fas fa-chevron-down" *ngIf="openMegaMenuId !== cat.id"></i>
+      </button>
+
+      <!-- Catégorie SANS sous-catégorie -> lien simple -->
+      <a href="#" *ngIf="!hasMegaMenu(cat.id)" (click)="selectCategory(cat.id); $event.preventDefault()">
+        {{ cat.name }}
+      </a>
+    </div>
+
+    <div class="navbar__special" *ngFor="let link of specialLinks">
+      {{ link.label }}
+    </div>
+  </div>
+</nav>
+
+<!-- MEGA MENU : un seul rendu, pour la catégorie actuellement ouverte -->
+<ng-container *ngFor="let cat of topCategories">
+  <ng-container *ngIf="hasMegaMenu(cat.id) && openMegaMenuId === cat.id">
+    <div class="mega-overlay" (click)="closeMegaMenu()"></div>
+    <div class="mega-menu">
+      <div class="mega-inner">
+        <div class="mega-col" *ngFor="let group of getMegaMenu(cat.id)?.groups">
+          <h4 class="mega-group-title">{{ group.subcategory.name }}</h4>
+          <ul>
+            <li *ngFor="let product of group.products"
+                (click)="selectMegaMenuItem(group.subcategory.id, product.name)">{{ product.name }}</li>
+          </ul>
+        </div>
+        <div class="mega-col" *ngIf="(getMegaMenu(cat.id)?.singles?.length || 0) > 0">
+          <ul class="mega-singles">
+            <li *ngFor="let product of getMegaMenu(cat.id)?.singles" class="mega-single"
+                (click)="selectMegaMenuItem(cat.id, product.name)"><strong>{{ product.name }}</strong></li>
+          </ul>
+        </div>
+        <div class="mega-promo">
+          <div class="mega-promo-box">
+            <div class="promo-badge">EN LIGNE</div>
+            <h3>CODE en minutes</h3>
+            <p>100% SÉCURISÉ</p>
+            <button (click)="closeMegaMenu()">Commander <i class="fas fa-angle-right"></i></button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </ng-container>
+</ng-container>

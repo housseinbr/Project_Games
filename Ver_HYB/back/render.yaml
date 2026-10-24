@@ -1,0 +1,16 @@
+services:
+  - type: web
+    name: gaming-shop-backend
+    runtime: docker
+    plan: free
+    envVars:
+      - key: PORT
+        value: 8083
+      - key: MONGODB_URI
+        value: mongodb+srv://siwaratiya_db_user:xT2EmwWgiMmwdjzo@cluster0.tciwegm.mongodb.net/gamingshop?appName=Cluster0
+      - key: JWT_SECRET
+        value: GamingShopSuperSecretKeyForJWTTokenGeneration2024VeryLongKey
+    disk:
+      name: uploads-temp
+      mountPath: /app/uploads/products
+      sizeGB: 1

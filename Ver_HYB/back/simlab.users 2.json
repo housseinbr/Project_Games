@@ -1,0 +1,125 @@
+[{
+  "_id": {
+    "$oid": "6a05a786cb9e9a1440449a1c"
+  },
+  "name": "aziz admin",
+  "email": "admin@gmail.com",
+  "password": "$2a$12$DvpCkVu/vIcu1XI.fzf3Be90VqNUeNo6jexgga34Hj/SJhJZPQvYG",
+  "role": "ADMIN",
+  "specialite": "Cardiology",
+  "createdAt": {
+    "$date": "2026-05-14T10:44:22.457Z"
+  },
+  "updatedAt": {
+    "$date": "2026-07-23T16:33:25.563Z"
+  },
+  "__v": 0,
+  "profilePicture": "http://localhost:5000/uploads/users/profile-1781480213865.jpg",
+  "dateOfBirth": {
+    "$date": "1999-02-02T00:00:00.000Z"
+  },
+  "firstName": "aziz",
+  "lastName": "lassoued",
+  "phoneNumber": "90007044",
+  "mustChangePassword": false
+},
+{
+  "_id": {
+    "$oid": "6a68765eb157e9c2d801f578"
+  },
+  "firstName": "saoussen",
+  "lastName": "layouni",
+  "email": "layouni.saoussen@famso.u-sousse.tn",
+  "phoneNumber": "52785163",
+  "password": "$2a$12$/r2nG8shLZWPQMIS2eaR8e.2YtezRtzVUekxiHX62KkjQ5rkEfHSW",
+  "role": "DOCTOR",
+  "profilePicture": "",
+  "mustChangePassword": true,
+  "createdAt": {
+    "$date": "2026-07-28T09:29:02.926Z"
+  },
+  "updatedAt": {
+    "$date": "2026-07-28T09:29:02.926Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "6a68765fb157e9c2d801f57b"
+  },
+  "firstName": "admin",
+  "lastName": "cesime",
+  "email": "cesime.sousse@famso.u-sousse.tn",
+  "phoneNumber": "12345678",
+  "password": "$2a$12$BqCF8JvIyQRlOS70s4W.k.tkJBkps5/PFf6.EgdLknz9IDCMR8OCi",
+  "role": "ADMIN",
+  "profilePicture": "",
+  "mustChangePassword": false,
+  "createdAt": {
+    "$date": "2026-07-28T09:29:03.180Z"
+  },
+  "updatedAt": {
+    "$date": "2026-07-28T09:31:03.704Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "6a68765fb157e9c2d801f57e"
+  },
+  "firstName": "hafedh",
+  "lastName": "abbasi",
+  "email": "hafedh.abbasi@famso.u-sousse.tn",
+  "phoneNumber": "12345678",
+  "password": "$2a$12$3p0Z8kpsn1aOW76whyxzK.gsOauqICeq/akWySDBohAjGq4eXIUTK",
+  "role": "DOCTOR",
+  "profilePicture": "",
+  "mustChangePassword": true,
+  "createdAt": {
+    "$date": "2026-07-28T09:29:03.444Z"
+  },
+  "updatedAt": {
+    "$date": "2026-07-28T09:29:03.444Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "6a68765fb157e9c2d801f581"
+  },
+  "firstName": "habiba",
+  "lastName": "benhamada",
+  "email": "habiba.benhamada@famso.u-sousse.tn",
+  "phoneNumber": "12345678",
+  "password": "$2a$12$Ep7p6JBt3JeIDh5VrcCMS.E/lSmTmGVxmqlZYDO.OC0IdQ8M.DiWW",
+  "role": "DOCTOR",
+  "profilePicture": "",
+  "mustChangePassword": true,
+  "createdAt": {
+    "$date": "2026-07-28T09:29:03.695Z"
+  },
+  "updatedAt": {
+    "$date": "2026-07-28T09:29:03.695Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "6a6876a2b157e9c2d801f589"
+  },
+  "firstName": "elhem",
+  "lastName": "houichi",
+  "email": "houichi.elhem@famso.u-sousse.tn",
+  "phoneNumber": "12345678",
+  "password": "$2a$12$.Kn9XOt6IxjBA2Cq..KZ2uCBarSMOiW61Y766ksTCd4o40tXxlLIu",
+  "role": "DOCTOR",
+  "profilePicture": "",
+  "mustChangePassword": true,
+  "createdAt": {
+    "$date": "2026-07-28T09:30:10.858Z"
+  },
+  "updatedAt": {
+    "$date": "2026-07-28T09:30:10.858Z"
+  },
+  "__v": 0
+}]

@@ -1,0 +1,14 @@
+services:
+  - type: static
+    name: gaming-shop-frontend
+    buildCommand: node set-env.js && npm run build
+    staticPublishPath: dist/gaming-shop-frontend
+    routes:
+      - source: /*
+        destination: /index.html
+        action: rewrite
+    envVars:
+      - key: API_URL
+        value: https://back-mahri.onrender.com/api
+      - key: WS_URL
+        value: wss://back-mahri.onrender.com/ws

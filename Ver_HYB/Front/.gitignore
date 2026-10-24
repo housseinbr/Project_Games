@@ -1,0 +1,22 @@
+# Dependency directories
+node_modules/
+
+# Build outputs
+dist/
+/tmp
+/out-tsc
+/bazel-out
+
+# IDEs and editors
+.idea/
+.project
+.classpath
+.cproject
+.settings/
+.vscode/
+*.launch
+*.sublime-workspace
+
+# Local configuration files
+.angular/
+.env
